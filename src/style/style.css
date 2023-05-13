@@ -33,7 +33,6 @@ button {
 }
 button:hover {
   background-color: var(--main-bg-color);
-
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 .main-page {
@@ -59,10 +58,15 @@ button:hover {
 .header .navigation__list > * {
   padding: 10px 20px;
 }
-.navigation__list > *:hover {
+.header .navigation__list > *:hover {
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
 }
+
+.footer_navigation__item > .navigation__item-link:hover {
+  color: var(--green-color);
+}
+
 
 .navigation {
 }
@@ -421,7 +425,7 @@ button:hover {
   box-sizing: border-box;
   padding: 5% 5vw 2% 14vw;
   display: grid;
-  grid-template-columns: repeat(3, 33%);
+  grid-template-columns: 30% 40% 40%;
   grid-template-rows: repeat(6, auto);
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -462,7 +466,7 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, min-content);
-  gap: 50% 0px;
+  gap: 40% 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "."
