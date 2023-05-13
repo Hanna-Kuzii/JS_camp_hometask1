@@ -5,6 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style/style.css">
+  <link href="https://fonts.cdnfonts.com/css/georgia-2?styles=33750,33751" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@900&family=Poppins:wght@500&display=swap"
+    rel="stylesheet">
   <title>Hometask 1</title>
 </head>
 
@@ -12,7 +20,7 @@
   <div class="main-page">
     <header class="header">
       <a href="" class="header__title">Alivio</a>
-      <nav class="header_navigation navigation">
+      <nav class="header__navigation navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
             <a href="" class="navigation__item-link">Why Alivio</a>
@@ -30,26 +38,25 @@
       </nav>
       <div class="header__registration registration">
         <button class="registration__button button__sign">Sign in</button>
-        <button class="registration__button button__trial">Start Trial</button>
+        <button class="registration__button button__trial green-button">Start Trial</button>
       </div>
     </header>
     <main class="page">
       <section class="page__main-block main-block">
         <div class="main-block__container">
-          <div class="main-block__container__title">Be aware, Manage well.</div>
+          <div class="main-block__container__title">Be aware,<br>Manage well.</div>
           <div class="main-block__container__text">Everyone experiences stress in different ways. Let Alivio guide you,
             in a personalized journal experience, to overcome your stress.</div>
-          <button class="main-block__container__button">Find You Way</button>
-        </div>
-        <div class="main-block__image">
-          <img src="" alt="cover">
+          <button class="main-block__container__button green-button">Find You Way</button>
         </div>
       </section>
       <section class="page__howitworks howitworks">
         <div class="howitworks__description">
-          <div class="howitworks__description__title">How it works</div>
-          <div class="howitworks__description__subtitle">Understand & Release the stress in 3 steps</div>
-          <div class="howitworks__description__text">Alivio offers as many journals it takes, tackling different areas
+          <div class="howitworks__description__title container__title">How it works</div>
+          <div class="howitworks__description__subtitle container__subtitle">Understand & Release the stress in 3 steps
+          </div>
+          <div class="howitworks__description__text container__text">Alivio offers as many journals it takes, tackling
+            different areas
             such as anxiety, overwhelmedness, sadness, or anger, and a variety of personal causes, to help you become
             aware of your emotions, and guide you in how to manage stress.</div>
         </div>
@@ -61,7 +68,7 @@
             </div>
             <div class="step__text">Answer a quick survey about how you express yourself, what causes you stress, and
               what area would you like to work on. This way, we can fully personalize your journal!</div>
-            <div class="step__text__image">
+            <div class="step__image">
               <img src="/src/img/step_1.svg" alt="step 1">
             </div>
           </div>
@@ -72,7 +79,7 @@
             </div>
             <div class="step__text">Write, draw, reflect, understand. Alivio will guide you through the prompts and will
               help you manage your stress!</div>
-            <div class="step__text__image">
+            <div class="step__image">
               <img src="/src/img/step_2.svg" alt="step 2">
             </div>
           </div>
@@ -83,7 +90,7 @@
             </div>
             <div class="step__text">Now you are aware, and have a way to manage and overcome your own stress. What are
               you waiting for? Alivio today!</div>
-            <div class="step__text__image">
+            <div class="step__image">
               <img src="/src/img/step_3.svg" alt="step 3">
             </div>
           </div>
@@ -93,56 +100,56 @@
         <div class="success-story__description">
           <div class="success-story__description__title">Let's hear about Kayla&#8217;s success story</div>
           <div class="success-story__description__text">See how well Alivio works in a real customer&#8217;s life.</div>
-          <button class="success-story__description__button">Let&#8217;s get started</button>
+          <button class="success-story__description__button green-button">Let&#8217;s get started</button>
         </div>
         <div class="success-story__video">
           <img src="/src/img/video.svg" alt="video of Katya's success" class="video">
-          <img src="/src/img/play-white.svg" alt="play">
         </div>
 
       </section>
       <section class="page__ourproduct ourproduct">
-        <img 
-          src=""
-          alt="girl" 
-          class="ourproduct__image"
-        >
-        <div class="ourproduct__description">
-          <div class="ourproduct__description__title">Our product</div>
-          <div class="ourproduct__description__subtitle">You tell us your stress, We make your diary</div>
-          <div class="ourproduct__description__text">Everyone experiences it, and in different ways. Let Alivio guide
-            you, in a personalized journal experience, to overcome your stress.</div>
-          <button class="ourproduct__description">Find Your Way</button>
-        </div>
-        <div class="customized">
-          <div class="customized__title">Customized For</div>
-          <hr />
-          <img src="/src/img/customized__photo.svg" alt="photo of person">
-          <div class="customized__name">Mikayla</div>
-          <div class="customized__description">Your custom contents</div>
-          <ul class="customized__contents">
-            <li class="customized__contents__item">Understand Your Stress</li>
-            <li class="customized__contents__item">Anger Management</li>
-          </ul>
+        <div class="ourproduct__picture">
+          <img src="/src/img/girl.png" alt="girl" class="ourproduct__picture__image">
+          <div class="customized">
+            <div class="customized__title">Customized For</div>
+            <hr />
+            <img src="/src/img/customized__photo.png" alt="photo of person" class="customized__photo">
+            <div class="customized__name">Mikayla</div>
+            <div class="customized__description">Your custom contents</div>
+            <ul class="customized__contents">
+              <li class="customized__contents__item">Understand Your Stress</li>
+              <li class="customized__contents__item">Anger Management</li>
+            </ul>
 
+          </div>
         </div>
+        <div class="ourproduct__description">
+          <div class="ourproduct__description__title container__title">Our product</div>
+          <div class="ourproduct__description__subtitle container__subtitle">You tell us your stress,<br>make your diary
+          </div>
+          <div class="ourproduct__description__text container__text">Everyone experiences it, and in different ways. Let
+            Alivio guide
+            you, in a personalized journal experience, to overcome your stress.</div>
+          <button class="ourproduct__description green-button">Find Your Way</button>
+        </div>
+
       </section>
     </main>
     <footer class="footer">
       <div class="footer__links">
         <a href="" class="footer__title">Alivio</a>
         <nav class="footer_navigation navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
+          <ul class="navigation__list footer_navigation__list">
+            <li class="navigation__item footer_navigation__item">
               <a href="" class="navigation__item-link">Why Alivio</a>
             </li>
-            <li class="navigation__item">
+            <li class="navigation__item footer_navigation__item">
               <a href="" class="navigation__item-link">Solutions</a>
             </li>
-            <li class="navigation__item">
+            <li class="navigation__item footer_navigation__item">
               <a href="" class="navigation__item-link">Community</a>
             </li>
-            <li class="navigation__item">
+            <li class="navigation__item footer_navigation__item">
               <a href="" class="navigation__item-link">Pricing</a>
             </li>
           </ul>
@@ -153,7 +160,7 @@
           <img src="/src/img/icon-facebook.svg" alt="facebook" class="footer__social__icon">
         </a>
         <a href="" class="footer__social__item">
-          <img src="/src/img/icon-instagram.svg" alt="instagram" class="footer__social__icon">
+          <img src="/src/img/icon-instagram.svg" alt="instagram" class="footer__social__icon instagram">
         </a>
         <a href="" class="footer__social__item">
           <img src="/src/img/icon-twitter.svg" alt="twitter" class="footer__social__icon">
@@ -161,14 +168,15 @@
       </div>
       <div class="footer__discover">
         <div class="footer__discover__title">Discover our solutions</div>
-        <div class="footer__discover__google">
-          <img src="/src/img/icon-google-play.svg" alt="google play">
-          <div class="footer__discover__google__text">Get it on Google Play</div>
+        <div class="footer__discover__apps">
+          <div class="footer__discover__google">
+            <!-- <img src="/src/img/google-play-logo.svg" alt="google play" class="logo"> -->
+          </div>
+          <div class="footer__discover__apple">
+            <!-- <img src="/src/img/app-store-apple-logo.svg" alt="apple store"  class="logo"> -->
+          </div>
         </div>
-        <div class="footer__discover__apple">
-          <img src="/src/img/icon-apple-logo.svg" alt="apple store">
-          <div class="footer__discover__apple__text">Avalaible on the Apple Store</div>
-        </div>
+
       </div>
     </footer>
   </div>
