@@ -123,7 +123,7 @@ button:hover {
       rgba(255, 255, 255, 1) 14%,
       rgba(0, 0, 0, 0.1) 53%
     ),
-    url(/src/img/cover.png);
+    url(./img/cover.png);
 
   background-repeat: no-repeat;
   background-position: right;
@@ -527,12 +527,12 @@ button:hover {
   grid-area: footer__discover__apps;
 }
 .footer__discover__google {
-  background-image: url(/src/img/google-play-logo.svg);
+  background-image: url(./img/google-play-logo.svg);
   background-size: cover;
 }
 
 .footer__discover__apple {
-  background-image: url(/src/img/app-store-apple-logo.svg);
+  background-image: url(./img/app-store-apple-logo.svg);
   background-size: cover;
 }
 
