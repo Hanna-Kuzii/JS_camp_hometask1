@@ -747,7 +747,7 @@ button:hover {
   }
   .success-story,
   .ourproduct {
-    font-size: 7px;
+    font-size: 7.5px;
   }
   .ourproduct {
     padding: 5vh 10vw 5vh 12vw;
@@ -794,11 +794,11 @@ button:hover {
     grid-area: step__image;
   }
 
-  .howitworks,
+  .howitworks__description,
   .step__title,
   .success-story,
   .ourproduct {
-    font-size: 6px;
+    font-size: 7px;
   }
 
   .success-story {
