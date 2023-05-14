@@ -9,6 +9,7 @@ body {
   font-size: 10px;
   margin: 0;
   box-sizing: border-box;
+  transition: all 1s ease-in-out;
 }
 
 a {
@@ -34,6 +35,9 @@ button {
 button:hover {
   background-color: var(--main-bg-color);
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+.title:hover {
+  color: var(--green-color);
 }
 .main-page {
 }
@@ -66,7 +70,6 @@ button:hover {
 .footer_navigation__item > .navigation__item-link:hover {
   color: var(--green-color);
 }
-
 
 .navigation {
 }
@@ -116,7 +119,7 @@ button:hover {
 }
 .main-block {
   height: 895px;
-  width: 100vw;
+  width: 100%;
   background-image: linear-gradient(
       120deg,
       rgba(255, 255, 255, 1) 0%,
@@ -365,7 +368,7 @@ button:hover {
 }
 .customized {
   position: relative;
-  top: -25%;
+  top: -40%;
   left: -10%;
   width: 30%;
   background-color: #fff;
@@ -390,7 +393,6 @@ button:hover {
 .customized__photo {
   border-radius: 50%;
   position: relative;
-  top: -20%;
   height: auto;
   object-fit: cover;
   margin: 5% 0;
@@ -420,14 +422,14 @@ button:hover {
 }
 .footer {
   background-color: var(--main-bg-color);
-  width: 100vw;
+  width: 100%;
   height: 60vh;
   box-sizing: border-box;
   padding: 5% 5vw 2% 14vw;
   display: grid;
-  grid-template-columns: 30% 40% 40%;
+  grid-template-columns: 25% min-content auto;
   grid-template-rows: repeat(6, auto);
-  gap: 0px 0px;
+  gap: 0px 5%;
   grid-auto-flow: row;
   grid-template-areas:
     "footer__links . ."
@@ -482,13 +484,17 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  gap: 0px 10%;
+  gap: 0px 50px;
   grid-auto-flow: row;
   grid-template-areas: ". . .";
   grid-area: footer__social;
 }
 .footer__social__item {
   width: 100%;
+}
+.footer__social__item:hover, .footer__discover__item:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 .footer__social__icon {
   background-color: #fff;
@@ -500,7 +506,7 @@ button:hover {
 .footer__discover {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.7fr 75px;
+  grid-template-rows: min-content auto;
   grid-auto-flow: row;
   grid-template-areas:
     "footer__discover__title"
@@ -512,7 +518,7 @@ button:hover {
   text-align: center;
   font-family: "Poppins";
   font-weight: 500;
-  font-size: 2em;
+  font-size: 2.5em;
   line-height: 125%;
   letter-spacing: 0.005em;
   color: #fff;
@@ -526,14 +532,16 @@ button:hover {
   grid-template-areas: ". .";
   grid-area: footer__discover__apps;
 }
+.footer__discover__item {
+  background-size: cover;
+}
+
 .footer__discover__google {
   background-image: url(/src/img/google-play-logo.svg);
-  background-size: cover;
 }
 
 .footer__discover__apple {
   background-image: url(/src/img/app-store-apple-logo.svg);
-  background-size: cover;
 }
 
 .logo {
@@ -586,14 +594,39 @@ button:hover {
     padding-bottom: 5%;
   }
   .customized {
-    top: -30%;
+    top: -50%;
     width: 40%;
   }
   .footer {
     grid-template-columns: 20% 1fr 1fr;
+    grid-template-areas:
+    "footer__links . ."
+    "footer__links . ."
+    "footer__links . ."
+    "footer__links . footer__discover"
+    "footer__links . footer__discover"
+    ". footer__social footer__discover";
+  }
+  .footer__discover {
+    grid-template-rows: min-content 1fr 1fr;
+    grid-template-areas:
+      "footer__discover__title"
+      "footer__discover__apps"
+      "footer__discover__apps";
+  }
+  .footer__discover__apps {
+    width: 70%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px 0;
+    grid-template-areas: "."
+    ".";
   }
   .footer_navigation__list {
     row-gap: 20%;
+  }
+  .footer__social {
+    column-gap: 10%;
   }
 }
 
@@ -657,12 +690,10 @@ button:hover {
     padding: 10px 20px;
   }
   .footer {
-    height: 55vh;
     grid-template-columns: 35% 65%;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
     column-gap: 5px;
     grid-template-areas:
-      "footer__links ."
       "footer__links footer__discover"
       "footer__links footer__discover"
       "footer__links footer__social";
@@ -674,7 +705,20 @@ button:hover {
   .footer__discover {
     grid-template-rows: min-content 75px;
     row-gap: 10%;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content auto;
+    grid-template-areas:
+      "footer__discover__title"
+      "footer__discover__apps";
   }
+  .footer__discover__apps {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 15px;
+    grid-auto-flow: row;
+    grid-template-areas: ". .";
+}
   .footer__social {
     column-gap: 15%;
   }
