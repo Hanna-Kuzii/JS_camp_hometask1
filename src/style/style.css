@@ -492,7 +492,8 @@ button:hover {
 .footer__social__item {
   width: 100%;
 }
-.footer__social__item:hover, .footer__discover__item:hover {
+.footer__social__item:hover,
+.footer__discover__item:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -538,17 +539,12 @@ button:hover {
 
 .footer__discover__google {
   background-image: url(../img/google-play-logo.svg);
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 .footer__discover__apple {
   background-image: url(../img/app-store-apple-logo.svg);
-  background-size: cover;
-}
-
-.logo {
-  width: 210px;
-  height: 65px;
+  /* background-size: cover; */
 }
 
 .instagram {
@@ -602,12 +598,12 @@ button:hover {
   .footer {
     grid-template-columns: 20% 1fr 1fr;
     grid-template-areas:
-    "footer__links . ."
-    "footer__links . ."
-    "footer__links . ."
-    "footer__links . footer__discover"
-    "footer__links . footer__discover"
-    ". footer__social footer__discover";
+      "footer__links . ."
+      "footer__links . ."
+      "footer__links . ."
+      "footer__links . footer__discover"
+      "footer__links . footer__discover"
+      ". footer__social footer__discover";
   }
   .footer__discover {
     grid-template-rows: min-content 1fr 1fr;
@@ -621,8 +617,9 @@ button:hover {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 10px 0;
-    grid-template-areas: "."
-    ".";
+    grid-template-areas:
+      "."
+      ".";
   }
   .footer_navigation__list {
     row-gap: 20%;
@@ -720,7 +717,7 @@ button:hover {
     gap: 0px 15px;
     grid-auto-flow: row;
     grid-template-areas: ". .";
-}
+  }
   .footer__social {
     column-gap: 15%;
   }
@@ -757,5 +754,94 @@ button:hover {
   }
   .footer_navigation__list {
     row-gap: 15%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-block__container {
+    width: 70%;
+  }
+  .header {
+    font-size: 8px;
+  }
+  .header .navigation__list > * {
+    padding: 5px 10px;
+  }
+  .howitworks__description {
+    display: flex;
+    flex-direction: column;
+  }
+  .step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.6fr;
+    gap: 5% 2%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "step__title step__image"
+      "step__text step__text";
+  }
+
+  .step__text {
+    grid-area: step__text;
+  }
+
+  .step__title {
+    grid-area: step__title;
+  }
+
+  .step__image {
+    grid-area: step__image;
+  }
+
+  .howitworks,
+  .step__title,
+  .success-story,
+  .ourproduct {
+    font-size: 6px;
+  }
+
+  .success-story {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .success-story__description,
+  .success-story__video {
+    width: 100%;
+  }
+  .success-story__description__text {
+    margin-bottom: 5px;
+  }
+
+  .footer__discover {
+    grid-template-rows: min-content 1fr 1fr;
+    grid-template-areas:
+      "footer__discover__title"
+      "footer__discover__apps"
+      "footer__discover__apps";
+  }
+  .footer__discover__apps {
+    width: 70%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px 0;
+    grid-template-areas:
+      "."
+      ".";
+  }
+  .footer__social {
+    column-gap: 5%;
+  }
+  .footer__social__icon {
+    width: 6em;
+    border: 1.5em solid #fff;
+  }
+  .instagram {
+    border: none;
+    padding: 1.5em;
+  }
+
+  .green-button {
+    padding: 10px 25px;
   }
 }
